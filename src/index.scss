@@ -1,0 +1,473 @@
+@font-face {
+  font-family: "GothamPro-Bold";
+  src: url("/fonts/GothamPro-Bold.eot");
+  src:
+    local("Gotham Pro Bold"),
+    local("GothamPro-Bold"),
+    url("/fonts/GothamPro-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/GothamPro-Bold.woff") format("woff"),
+    url("/fonts/GothamPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamPro-Black";
+  src: url("/fonts/GothamPro-Black.eot");
+  src:
+    local("Gotham Pro Black"),
+    local("GothamPro-Black"),
+    url("/fonts/GothamPro-Black.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/GothamPro-Black.woff") format("woff"),
+    url("/fonts/GothamPro-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("/fonts/GothamPro.eot");
+  src:
+    local("Gotham Pro"),
+    local("GothamPro"),
+    url("/fonts/GothamPro.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/GothamPro.woff") format("woff"),
+    url("/fonts/GothamPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$primary-black-color: #131212;
+$primary-white-color: #fff;
+$primary-orange-color: #fb6542;
+
+@mixin flex-container($width: auto) {
+  width: $width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column-container($align: normal, $justify: normal, $width: auto) {
+  width: $width;
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin filter-column() {
+  width: calc(50% - 1rem);
+  display: flex;
+  flex-direction: column;
+}
+
+%cursor-hover {
+  :hover {
+    cursor: pointer;
+  }
+}
+
+%flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+:root {
+  background-color: $primary-black-color;
+  font-family: "Gotham Pro";
+  color: $primary-white-color;
+  max-width: 100vw;
+  padding: 0;
+}
+
+.body {
+  padding: 0 0 1.875rem;
+}
+
+.navbar {
+  color: $primary-orange-color;
+  position: sticky;
+  top: 0;
+  margin-bottom: 3.4375rem;
+  padding: 1.875rem 3.75rem;
+  z-index: 2;
+  background-color: rgba(19, 18, 18, 0.8);
+
+  @extend %cursor-hover;
+  @extend %flex-align-center;
+}
+
+.PagesAndMenu {
+  width: 100%;
+  justify-content: space-between;
+  margin-left: 6.25rem;
+  opacity: 1;
+
+  @extend %flex-align-center;
+}
+
+.Pages {
+  @extend %flex-align-center;
+}
+
+.pagesButton {
+  margin-right: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: $primary-orange-color;
+}
+
+.pagesDisabledButton {
+  margin-right: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: $primary-white-color;
+}
+
+.casesPage {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding: 0 3.75rem;
+}
+
+.casesTitle {
+  justify-content: space-between;
+  width: 100%;
+  font-size: 7.5rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+
+  box-sizing: border-box;
+  font-family: "GothamPro-Black";
+
+  @extend %flex-align-center;
+}
+
+.CasePage_firRect__2fh08 {
+  box-sizing: border-box;
+  margin-left: 60%;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border-radius: 5px;
+  transform: rotate(15deg);
+  border: 4px solid $primary-white-color;
+}
+
+.casesAndFilters {
+  justify-content: space-between;
+
+  @extend %flex-align-center;
+}
+
+.clearFilter {
+  font-size: 1.5rem;
+  color: $primary-orange-color;
+  margin-right: 1.25rem;
+  cursor: pointer;
+}
+
+.clearFilterRect {
+  height: 0;
+  width: 35px;
+  border: 1px solid $primary-orange-color;
+  margin-right: 1.25rem;
+}
+
+.FilterContainer {
+  box-sizing: border-box;
+  justify-content: flex-end;
+  width: 100%;
+
+  @extend %flex-align-center;
+}
+.brnRect {
+  color: $primary-white-color;
+  box-sizing: border-box;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border: 3px solid $primary-white-color;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.brnRect_open {
+  color: $primary-white-color;
+  box-sizing: border-box;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  margin-right: 2rem;
+  cursor: pointer;
+  background-color: $primary-white-color;
+}
+
+.CasePage_line__15UnD {
+  box-sizing: border-box;
+  width: 80px;
+  height: 0;
+  border: 1px solid $primary-white-color;
+  margin-right: 2rem;
+  background-color: $primary-white-color;
+}
+.CasePage_filtersText__25ayu {
+  display: flex;
+  box-sizing: border-box;
+  color: $primary-white-color;
+  letter-spacing: 0.02em;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.CasePage_secRect__1T1 {
+  color: $primary-white-color;
+  box-sizing: border-box;
+  margin-top: 1.5625rem;
+  width: 4.0625rem;
+  height: 4.0625rem;
+  border: 4px solid $primary-white-color;
+  border-radius: 5px;
+  transform: rotate(45deg);
+}
+
+.CasePage_filters {
+  width: 100%;
+  color: $primary-white-color;
+  display: flex;
+}
+
+.filtersWindow {
+  @include flex-column-container($align: center, $width: 100%);
+
+  padding: 0.625rem 6.25rem 0 2rem;
+  margin-bottom: 10rem;
+}
+
+.filtersHeader {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid $primary-white-color;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+
+  box-sizing: border-box;
+  color: $primary-white-color;
+  font-size: 1.5rem;
+}
+
+.filtersBody {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.filterColumn {
+  @include flex-column-container;
+}
+
+.columnValue {
+  box-sizing: border-box;
+  color: $primary-white-color;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+
+  @extend %cursor-hover;
+}
+
+.CasePage_secRect__1T1-7 {
+  color: $primary-white-color;
+  box-sizing: border-box;
+  margin-top: 1.5625rem;
+  width: 4.0625rem;
+  height: 4.0625rem;
+  border: 4px solid $primary-white-color;
+  border-radius: 5px;
+  transform: rotate(45deg);
+  margin-bottom: 8.125rem;
+}
+
+.cardsField {
+  width: 100%;
+  display: flex;
+  margin-bottom: 6.25rem;
+}
+
+.columnLeft {
+  @include filter-column;
+  margin-right: 2rem;
+}
+
+.columnRight {
+  @include filter-column;
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 1.5625rem;
+  max-height: "480px";
+
+  :first-child {
+    padding: 0;
+  }
+
+  img {
+    visibility: visible;
+    position: relative;
+  }
+
+  :hover .description {
+    visibility: visible;
+    position: relative;
+  }
+
+  :hover img {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.image {
+  max-height: 30rem;
+  object-fit: contain;
+}
+
+.CasePage_description {
+  @include flex-column-container($justify: end);
+}
+
+.description {
+  visibility: hidden;
+  position: absolute;
+  margin: 1.5rem;
+
+  @include flex-column-container($justify: end);
+  color: $primary-white-color;
+}
+
+.CasePage_title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.CasePage_caseFilters {
+  font-size: 1rem;
+}
+
+.redirectButton {
+  color: $primary-white-color;
+  width: 30vw;
+  align-self: center;
+  border: 1px solid $primary-white-color;
+  font-size: 4rem;
+  height: 6rem;
+  text-align: center;
+}
+
+.Footer {
+  @include flex-column-container($justify: center, $align: center);
+  margin-bottom: 6.25rem;
+}
+
+.FooterTitle {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 3.75rem;
+}
+
+.FooterDevider {
+  color: $primary-white-color;
+  background-color: $primary-white-color;
+  box-sizing: border-box;
+  height: 3.75rem;
+  opacity: 0.5;
+  margin-bottom: 3.75rem;
+
+  @include flex-container($width: 2px);
+}
+
+.FooterEmail {
+  font-size: 6rem;
+  color: $primary-white-color;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ContactUsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 11.5625rem;
+  margin: 0 6.25rem 6.25rem;
+}
+
+.setAppeal {
+  @include flex-container;
+}
+
+.SetAppealContainer {
+  @include flex-container;
+
+  box-sizing: border-box;
+  background-color: $primary-orange-color;
+  border-radius: 50%;
+
+  cursor: pointer;
+  width: 15.625rem;
+  height: 15.625rem;
+}
+
+.SetAppealText {
+  font-family: "GothamPro-Bold";
+  text-align: center;
+  font-size: 1.625rem;
+}
+
+.AddressContainer {
+  @include flex-column-container($justify: center);
+}
+
+.City {
+  font-family: "GothamPro-Bold";
+  font-size: 1.5rem;
+}
+
+.Addres {
+  font-size: 1.5rem;
+  margin-top: 0.625rem;
+  line-height: 2.1rem;
+}
+
+.Phone {
+  margin-top: 0.625rem;
+  cursor: pointer;
+  color: $primary-orange-color;
+  font-size: 1.5rem;
+}
+
+.TelegramContainer {
+  @include flex-column-container($align: end, $justify: center, $width: 100%);
+}
+
+.TelegramText {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.TelegramIconContainer {
+  @include flex-container($width: 100%);
+}
